@@ -1,6 +1,15 @@
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
 
-console.log(example, data);
+
+import data from './data/ghibli/ghibli.js';
+
+
+let peliculaConteiner = document.querySelector('.peliculas-conteiner');
+
+/* variable. forEach: iteracionrecorrer el objeto. Por cada elemento/objeto hace algo*/
+/*funcion flecha*/
+
+function data.forEach(element => {   
+    console.log(element)
+  });
+
+
