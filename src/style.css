@@ -1,0 +1,35 @@
+
+*{
+    font-family: 'Lilita One', cursive;/*Letra descargada*/
+   
+}
+
+header{
+    font-size: 700%;
+    text-align: center;
+    color: #fff;
+  
+
+}
+
+body{
+    background-image: url(img/nuube.jpg);
+    background-repeat: no-repeat; /*no se repita la imagen*/
+    background-size: cover; /*cubra toda la página*/
+}
+
+.imagen{
+     width: 150px;
+     
+}
+.frase{
+    font-size: 300%;
+    text-align:center;
+    color: #fff;
+}
+.alinear{
+
+    flex-direction: row;
+    display: flex;
+
+}
