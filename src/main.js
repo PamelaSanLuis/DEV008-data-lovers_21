@@ -1,36 +1,122 @@
-
-
 import data from './data/ghibli/ghibli.js';
 
-//GUARDA LOS DATOS DE BOTON PERSONAJE
-//const btnPersonaje = document.getElementById("botonPersonaje");
 
-//una variable para leer los datos del array de la data.
-//una variable para ver los datos de la data pero no en la consola.
-//Mostrar los datos de la data en el div de la página. 
+let datosPelicula = data.films;
+//Mostrar los titulos de las peliculas 
+//Vamos a mostrar los titulos de las peliculas con la manipulación del DOM y la creacion de eventos 
+//crear elementos
+
+const tituloPelisNode = document.getElementById("tituloPelicula");
+const directoresNode = document.getElementById("director");
+
+/*for (let i = 0; i<datosPelicula.length; i++){
+    const movilCarNode = document.createElement("div");
+    movilCarNode.classList.add("movieCard");
+    const image = document.createElement("img")
+    image.src  = datosPelicula[i].poster;
+    const titlee = document.createElement("p");
+    titlee.textContent = datosPelicula[i].title;
+    tituloPelisNode.appendChild(titlee);
+    tituloPelisNode.appendChild(image);
+}*/
+
+
+ //Crear un boton que muestre la data de los titulos 
+ const botonTitlee = document.getElementById("peliculaTitle");
+ botonTitlee.addEventListener("click", function(){
+
+    const titlee = document.createElement("p");
+    titlee.textContent = datosPelicula.map((datosPelicula) => datosPelicula.title)
+    tituloPelisNode.appendChild(titlee); 
+ })
+
+//crear un boton que muestre la data de los directores
+const botonDirec = document.getElementById("director");
+botonDirec.addEventListener("click", function(){
+   const direc =document.createElement("p");
+   direc.textContent = datosPelicula.map((datosPelicula) => datosPelicula.director)
+   directoresNode.appendChild(direc);
+})
+
+
+//CREANDO ELEMENTOS CON EL DOM
+
+ //entrar a la etiqueta del HTML desde el DOM
+ /*const impresionData = document.getElementById('demo');
+
+ //Usando el dom 
+ const botonPersonaje = document.getElementById("mensaje");
+  botonPersonaje.addEventListener("click", function(){
+        //BUSQUEDA DE UN DATO ESPECIFICO
+let btotoro = datosPelicula => datosPelicula.title === 'The Tale of the Princess Kaguya';
+let totoro = datosPelicula.find(btotoro); //METODO FIND
+console.log(totoro);
+//creación del div
+/*const div = document.createElement("div");
+impresionData.appendChild(div);
+
+const dataResulado = document.querySelector(".resultado")
+dataResulado.textContent = dataResulado.appendChild(totoro);
+})*/
+
+
+//creacion de eventos 
+
+
+//impresion de la inf con el div 
 
 
 
-//BOTON DE PERSONAJE
-/*btnPersonaje.addEventListener("click", function () {
-  let datapersonaje = document.getElementById("botonPersonaje").value;
-   
-document.getElementById("datoPersonaje").value = //funcion que va regresar los datos de la data; 
-}, true);*/
 
-/* variable. forEach: iteracion recorrer el array. Por cada elemento/objeto hace algo*/
-/*funcion flecha*/
-// data es el nombre de la "data"
-//flims es el nombre del array 
-//.forEach es el metodo que ayuda a ver los datos del arreglo ya que hace una iteración por cada c
+    //document.getElementById("resultado") = data.totoro;
+  
 
-let peliculas = document.getElementById(peliculas-conteiner)element =>
-data.films.forEach(function (films, release_date) {
-  let anios = films.filter(films = films.release_date < 2000);
-  console.log(anios);
 
-});
 
-//let peliculas = document.getElementById(peliculas-conteiner)
+//peliculaArray = datosPelicula[1].description;
+
+//let mostarDato = document.getElementById("demo1");
+
+//mostarDato = peliculaArray;
+
+/*let dataFilms = [];
+for (let i; i<data.length; i++){
+    if(data[i].films === dataFilms){
+        dataFilms.push(data[i]);
+    }
+}
+
+console.log(data);*/
+
+//FILTRADO DE ARRAY CON METODO MAP ESPECIFICO 
+/*const nombredirector = datosPelicula.map((datosPelicula)=> datosPelicula.director)
+
+console.log(nombredirector);
+
+//FILTRADO CON METODO forEach
+ datosPelicula.forEach((datosPelicula) =>console.log(datosPelicula.title) )*/
+
+ //SUMA DEL LOS DATOS DEL ARREGO NUMERO DE PELICULAS DIRIGIDAS POR 
+ //CADA DIRECTOR.
+
+ let sumaNew = {};
+
+ datosPelicula.forEach((datosPelicula)=> {
+    if(sumaNew[datosPelicula.director]){
+        sumaNew[datosPelicula.director]++
+    }else{
+        sumaNew[datosPelicula.director] = 1;
+    }
+ });
+
+ console.log(sumaNew);
+
+
+
+ 
+
+
+
+   // console.log("FUNCIONA PLOX") console.log("funciona plox", totoro);;
 
 

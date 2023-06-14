@@ -2,9 +2,10 @@
 
 
 
-export const example = () => {
+export const filtroPeliculas = () => {
 
-  return 'example';
+
+  return 'aun no se como se usa esto mañana aprendo xd';
 };
 
 export const anotherExample = () => {
