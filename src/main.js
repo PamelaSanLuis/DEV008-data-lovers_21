@@ -99,7 +99,7 @@ console.log(nombredirector);
  //SUMA DEL LOS DATOS DEL ARREGO NUMERO DE PELICULAS DIRIGIDAS POR 
  //CADA DIRECTOR.
 
- let sumaNew = {};
+ /*let sumaNew = {};
 
  datosPelicula.forEach((datosPelicula)=> {
     if(sumaNew[datosPelicula.director]){
@@ -109,7 +109,7 @@ console.log(nombredirector);
     }
  });
 
- console.log(sumaNew);
+ console.log(sumaNew);*/
 
 
 
