@@ -6,10 +6,49 @@ let datosPelicula = data.films;
 //Vamos a mostrar los titulos de las peliculas con la manipulación del DOM y la creacion de eventos 
 //crear elementos
 
-const tituloPelisNode = document.getElementById("tituloPelicula");
+//CREAR UN BOTON CON LA FUNCION DE FILTRAR LOS DATOS POR AÑO
+//SUMA DEL LOS DATOS DEL ARREGLO NUMERO DE PELICULAS DIRIGIDAS POR CADA DIRECTOR.
+
+ const botonDirectores = document.getElementById("directoresPelis");
+ botonDirectores.addEventListener("click", function(){
+let sumaNew = {};
+
+datosPelicula.forEach((datosPelicula)=> {
+   if(sumaNew[datosPelicula.director]){
+       sumaNew[datosPelicula.director]++
+   }else{
+       sumaNew[datosPelicula.director] = 1;
+   }
+   console.log(sumaNew);
+
+   for(let i=0; i<sumaNew.lenght; i++){
+    if(sumaNew[i]){
+        let directorEspecifico = datosPelicula => datosPelicula.director === "Isao Takahata";
+        let filtroED = datosPelicula.find(directorEspecifico);
+
+        let comparacion = sumaNew[i] == filtroED;
+        console.log(comparacion);
+    }else{
+        console.log("aun no se que va aqui");
+    }
+   }
+
+});
+
+ })
+
+
+
+/*const tituloPelisNode = document.getElementById("tituloPelicula");
 const directoresNode = document.getElementById("director");
 
-/*for (let i = 0; i<datosPelicula.length; i++){
+
+
+ //Crear un boton que muestre la data de los titulos 
+ const botonTitlee = document.getElementById("peliculaTitle");
+ botonTitlee.addEventListener("click", function(){
+  
+for (let i = 0; i<datosPelicula.length; i++){
     const movilCarNode = document.createElement("div");
     movilCarNode.classList.add("movieCard");
     const image = document.createElement("img")
@@ -18,16 +57,7 @@ const directoresNode = document.getElementById("director");
     titlee.textContent = datosPelicula[i].title;
     tituloPelisNode.appendChild(titlee);
     tituloPelisNode.appendChild(image);
-}*/
-
-
- //Crear un boton que muestre la data de los titulos 
- const botonTitlee = document.getElementById("peliculaTitle");
- botonTitlee.addEventListener("click", function(){
-
-    const titlee = document.createElement("p");
-    titlee.textContent = datosPelicula.map((datosPelicula) => datosPelicula.title)
-    tituloPelisNode.appendChild(titlee); 
+}
  })
 
 //crear un boton que muestre la data de los directores
@@ -59,20 +89,6 @@ const dataResulado = document.querySelector(".resultado")
 dataResulado.textContent = dataResulado.appendChild(totoro);
 })*/
 
-
-//creacion de eventos 
-
-
-//impresion de la inf con el div 
-
-
-
-
-    //document.getElementById("resultado") = data.totoro;
-  
-
-
-
 //peliculaArray = datosPelicula[1].description;
 
 //let mostarDato = document.getElementById("demo1");
@@ -95,28 +111,5 @@ console.log(nombredirector);
 
 //FILTRADO CON METODO forEach
  datosPelicula.forEach((datosPelicula) =>console.log(datosPelicula.title) )*/
-
- //SUMA DEL LOS DATOS DEL ARREGO NUMERO DE PELICULAS DIRIGIDAS POR 
- //CADA DIRECTOR.
-
- let sumaNew = {};
-
- datosPelicula.forEach((datosPelicula)=> {
-    if(sumaNew[datosPelicula.director]){
-        sumaNew[datosPelicula.director]++
-    }else{
-        sumaNew[datosPelicula.director] = 1;
-    }
- });
-
- console.log(sumaNew);
-
-
-
- 
-
-
-
-   // console.log("FUNCIONA PLOX") console.log("funciona plox", totoro);;
 
 
