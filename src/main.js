@@ -6,8 +6,40 @@ let datosPelicula = data.films;
 //Vamos a mostrar los titulos de las peliculas con la manipulación del DOM y la creacion de eventos 
 //crear elementos
 
+//CREAR UN BOTON CON LA FUNCION DE FILTRAR LOS DATOS POR AÑO
+//SUMA DEL LOS DATOS DEL ARREGLO NUMERO DE PELICULAS DIRIGIDAS POR CADA DIRECTOR.
 
-const tituloPelisNode = document.getElementById("tituloPelicula");
+ const botonDirectores = document.getElementById("directoresPelis");
+ botonDirectores.addEventListener("click", function(){
+let sumaNew = {};
+
+datosPelicula.forEach((datosPelicula)=> {
+   if(sumaNew[datosPelicula.director]){
+       sumaNew[datosPelicula.director]++
+   }else{
+       sumaNew[datosPelicula.director] = 1;
+   }
+   console.log(sumaNew);
+
+   for(let i=0; i<sumaNew.lenght; i++){
+    if(sumaNew[i]){
+        let directorEspecifico = datosPelicula => datosPelicula.director === "Isao Takahata";
+        let filtroED = datosPelicula.find(directorEspecifico);
+
+        let comparacion = sumaNew[i] == filtroED;
+        console.log(comparacion);
+    }else{
+        console.log("aun no se que va aqui");
+    }
+   }
+
+});
+
+ })
+
+
+
+/*const tituloPelisNode = document.getElementById("tituloPelicula");
 const directoresNode = document.getElementById("director");
 
 
@@ -57,20 +89,6 @@ const dataResulado = document.querySelector(".resultado")
 dataResulado.textContent = dataResulado.appendChild(totoro);
 })*/
 
-
-//creacion de eventos 
-
-
-//impresion de la inf con el div 
-
-
-
-
-    //document.getElementById("resultado") = data.totoro;
-  
-
-
-
 //peliculaArray = datosPelicula[1].description;
 
 //let mostarDato = document.getElementById("demo1");
@@ -94,27 +112,4 @@ console.log(nombredirector);
 //FILTRADO CON METODO forEach
  datosPelicula.forEach((datosPelicula) =>console.log(datosPelicula.title) )*/
 
-
-//CREAR UN BOTON CON LA FUNCION DE FILTRAR LOS DATOS POR AÑO
-//SUMA DEL LOS DATOS DEL ARREGO NUMERO DE PELICULAS DIRIGIDAS POR CADA DIRECTOR.
-
-/*let sumaNew = {};
-
-datosPelicula.forEach((datosPelicula)=> {
-   if(sumaNew[datosPelicula.release_date]){
-       sumaNew[datosPelicula.release_date]++
-   }else{
-       sumaNew[datosPelicula.release_date] = 1;
-   }
-});
-console.log(sumaNew);*/
-
-
-
-
- 
-
-
-
-   // console.log("FUNCIONA PLOX") console.log("funciona plox", totoro);;
 
