@@ -243,6 +243,7 @@ for (let i; i<data.length; i++){
 
 console.log(data);*/
 
+
 //FILTRADO DE ARRAY CON METODO MAP ESPECIFICO 
 /*const nombredirector = datosPelicula.map((datosPelicula)=> datosPelicula.director)
 
@@ -252,3 +253,19 @@ console.log(nombredirector);
  datosPelicula.forEach((datosPelicula) =>console.log(datosPelicula.title) )*/
 
 
+//personajes 
+
+const open= document.getElementById("botonPersonaje");
+const contenedorGeneral= document.getElementById("contenedor_general");
+
+open.addEventListener("click", () => {
+  contenedorGeneral.classList.add("show");
+  //alert("prueba");
+});
+
+close.addEventListener("click", () => {
+  contenedorGeneral.classList.remove("show");
+});
+
+//let personajesPorGenero = data.queryselectorAll(".gender");
+//console.log(personajesPorGenero);  
