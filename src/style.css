@@ -16,6 +16,12 @@ body {
     /*no se repita la imagen*/
     background-size: cover;
     /*cubra toda la página*/
+
+    background-attachment: fixed;
+    /*se ajusta la imagen al navegador*/
+
+      
+
 }
 
 .imagen {
@@ -49,6 +55,19 @@ body {
     color: #fff;
 }
 
+.contenedorMenu{
+    display: inline-block;
+    flex: wrap;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: left;
+    margin-top: 1px;
+    width: 350px;
+    height: 580px;
+
+}
+
+
 .btn1 {
     border-radius: 28px;
     text-shadow: 3px 2px 1px #9199b8;
@@ -56,6 +75,64 @@ body {
     padding: 19px;
     text-decoration: none;
 }
+
+
+.btn1:hover{
+    background-color: #fcde5b  ;
+
+}
+
+
+
+.btn2 {
+    border-radius: 28px;
+    text-shadow: 3px 2px 1px #9199b8;
+    text-align: center;
+    text-align-last: center;
+    display: inline-block;
+    vertical-align: text-bottom;
+    justify-content: flex;
+    font-size: 27px;
+    font-display: center;
+    padding: 1% 5%;
+    text-decoration: none;
+    position : relative;
+    margin: 4px 4px;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0;
+
+}
+
+.btn2:hover:hover{
+    background-color: #fcde5b ;
+
+}
+
+.btn3 {
+    border-radius: 28px;
+    text-shadow: 3px 2px 1px #9199b8;
+    text-align: center;
+    text-align-last: center;
+    display: inline-block;
+    vertical-align: text-bottom;
+    justify-content: flex;
+    font-size: 27px;
+    font-display: center;
+    padding: 1% 5%;
+    text-decoration: none;
+    position : relative;
+    margin: 4px 4px;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0;
+
+}
+
+.btn3:hover:hover{
+    background-color: #fcde5b ;
+
+}
+
+
 
 .alinear {
     font-size: 250%;
@@ -80,6 +157,51 @@ body {
     /*background-color: black;*/
 }
 
+
 .resultado{
     text-align: center;
 }
+.movieCard {
+
+}
+
+.tituloPelicula img{
+    width: 100px;
+    position: right;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    justify-content: space-around;
+}
+
+/*.estiloTarjetas{
+    width: fit-content;
+}*/
+
+.btnClose{
+    border-radius: 28px;
+    text-shadow: 3px 2px 1px #9199b8;
+    text-align: center;
+    text-align-last: center;
+    display: inline-block;
+    vertical-align: bottom;
+    justify-content: flex;
+    font-size: 27px;
+    font-display: center;
+    padding: 1% 5%;
+    text-decoration: none;
+    position: relative;
+    margin: 4px 4px;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0;
+    bottom: 5px;
+    right: 10px;
+
+
+}
+
+.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
