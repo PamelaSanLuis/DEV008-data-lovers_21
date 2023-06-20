@@ -161,31 +161,9 @@ body {
     text-align: center;
     /*background-color: black;*/
 }
-.btnClose{
-    border-radius: 28px;
-    text-shadow: 3px 2px 1px #9199b8;
+
+
+.resultado{
     text-align: center;
-    text-align-last: center;
-    display: inline-block;
-    vertical-align: bottom;
-    justify-content: flex;
-    font-size: 27px;
-    font-display: center;
-    padding: 1% 5%;
-    text-decoration: none;
-    position: relative;
-    margin: 4px 4px;
-    cursor: pointer;
-    box-shadow: 0 8px 16px 0;
-    float: right;
-    bottom: 5px;
-    right: 10px;
-
-
-}
-
-.show {
-    pointer-events: auto;
-    opacity: 1;
 
 }
