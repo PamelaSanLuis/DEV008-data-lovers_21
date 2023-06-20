@@ -136,7 +136,7 @@ botonmorita.addEventListener("click", function () {
     });
     const moritaData = yone.map((morita) =>morita.title);
     const moritaDataimg = yone.map((morita) => morita.poster);
-
+//prueba 
     const direc1 = document.createElement("div")
     const imagen = document.createElement("img")
   //console.log(goroData)    
